@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 ## Introduction
 
 It is now possible to collect a large amount of data about personal
