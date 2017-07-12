@@ -9,8 +9,6 @@ activity_data <- as.data.frame(activity_data)
 ## What is mean total number of steps taken per day?
 steps <- with(activity_data, tapply(steps, date, sum, na.rm = TRUE))
 hist(steps, main = ("Total Steps By Day"), col = "green", xlab = "Number of Steps")
-dev.copy(png, 'Total_Steps.png')
-dev.off()
 
 ## mean(steps)
 ## [1] 9354.23
@@ -29,10 +27,11 @@ plot(day_avg, x = rownames(day_avg), type = "l", col = "blue", xlab = "5 Minute 
 ## rownames(day_avg)[which.max(day_avg)]
 ## [1] "835"
 
-
 ## Imputing missing values
 ## sum(is.na(activity_data))
 ## [1] 2304
+
+## Mean of the 5 minute interval used to replace the missing values in the dataset. 'activity_data_imputed' is a new dataset with filled the missing data, in exchange to the original one.
 
 activity_data_imputed <- activity_data
 
